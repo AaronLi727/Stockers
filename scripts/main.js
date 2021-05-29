@@ -104,7 +104,7 @@ function alertContents() {
         if(request.status === 200) {
             //alert(request.responseText);
             location.href = "rocket.html";
-            console.log("Sucess");
+            console.log("Success");
             //console.log(request.responseText);
         } else {
             //alert('Problem');

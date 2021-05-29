@@ -9,10 +9,10 @@ var preMarket = localStorage.getItem("preMarket");
 var difference = open - close; //difference between open and close price
 var round = difference.toFixed(2); //rounding difference to 2 decimals
 var img = document.createElement('img');
-img.src = "images/rocketgif.gif"
 var src = document.getElementById("header")
 if(open - close >= 0){ //test whether its positive or negative (to the moon or not)
-    s.innerHTML += '<p> Stock: ' + symbol + ' is up ' + round + '</p>';
+    s.innerHTML += '<p> Symbol: ' + symbol + '</p>';
+    s.innerHTML += '<p> Difference: ' + round + '</p>';
     s.innerHTML += '<p> Open : ' + open;
     s.innerHTML += '<p> High : ' + high;
     s.innerHTML += '<p> Low : ' + low;
@@ -20,12 +20,19 @@ if(open - close >= 0){ //test whether its positive or negative (to the moon or n
     s.innerHTML += '<p> Volume : ' + volume;
     s.innerHTML += '<p> After Hours : ' + afterHours;
     s.innerHTML += '<p> PreMarket : ' + preMarket;
+    document.body.style.backgroundImage = "url(images/rocketgif.gif)";
     console.log(open-close);
-    body.backgroundImage = img.src;
 }else {
-    img.src = "images/Samoyed2.jpg"
-    s.innerHTML += '<p> Stock: ' + symbol + ' is down ' + round + '</p>';
-    src.appendChild(img);
+    s.innerHTML += '<p> Symbol: ' + symbol + '</p>';
+    s.innerHTML += '<p> Difference: ' + round + '</p>';
+    s.innerHTML += '<p> Open : ' + open;
+    s.innerHTML += '<p> High : ' + high;
+    s.innerHTML += '<p> Low : ' + low;
+    s.innerHTML += '<p> Close : ' + close;
+    s.innerHTML += '<p> Volume : ' + volume;
+    s.innerHTML += '<p> After Hours : ' + afterHours;
+    s.innerHTML += '<p> PreMarket : ' + preMarket;
+    document.body.style.backgroundImage = "url(images/badrocket.gif)";
 }
 console.log(symbol)
 console.log(open)

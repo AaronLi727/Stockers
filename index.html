@@ -8,22 +8,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     </head>
     <body>
-        <!-- <div class="container">
-            <div class="container__item">
-        <form id= "form1">
-            <input id="stocks" type="text" autocomplete="off" required onkeyup="this.value=this.value.toUpperCase()">
-            <label for="eys"><span>Enter your stock</span></label>
-            <input type="submit" id="submit"></input>
-        </form>
-            </div>
-        </div> -->
-        <!-- <canvas id="c" style='width:100%; height:100%;'></canvas> -->
         <div class="container">
-            <div class="container__item">
-              <form id= "form1">
+            <div class="input-group mb-3" id="form1">
+                <input id="stocks" type="text" class="form-control" autocomplete="off" maxlength="4" placeholder="Enter Stock" required onkeyup="this.value=this.value.toUpperCase()">
+                <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+              </div>
+              <!-- <form id= "form1">
                 <input id="stocks" type="text" autocomplete="off" maxlength = "4" placeholder="Enter Stock" required onkeyup="this.value=this.value.toUpperCase()">
                 <button type="submit" id ="submit" class="btn btn btn--primary btn--inside uppercase">Submit</button>
-            </form>
+            </form> -->
             </div>
           </div>
         <script src='scripts/main.js'></script>
