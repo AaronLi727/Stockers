@@ -3,7 +3,6 @@
 //request.open('GET','https://api.polygon.io/v1/open-close/AAPL/2020-10-14?unadjusted=true&apiKey=VCGLIIfAOcBMwgq5lY1hO9XE5bNsa5dM', true)
 
 
-	
 
 
 document.getElementById('form1').onsubmit = function() { 
