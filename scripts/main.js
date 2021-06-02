@@ -15,6 +15,7 @@ document.getElementById('form1').onsubmit = function() {
 
 
 var today = new Date();
+
 var dd = today.getDate() - 1;
 var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
@@ -32,6 +33,10 @@ if(today.getDay() == 1) { //check if day is monday
     // console.log(dd);
     // console.log(today.getDate());
 }
+var firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+var lastDay = new Date(today.getFullYear(), today.getMonth(), 0);
+console.log(firstDay)
+console.log(lastDay)
 // NEED TO CHECK FOR HOLIDAYS !!!!!
 
 //INPUT A CHECK WHEN MARKET CLOSES AFTER 5:30pm (I THINK DO MORE RESEARHASHDSAHDA)
@@ -41,7 +46,17 @@ if(dd < 10) {
 if(mm < 10) {
     mm = '0'+mm;
 }
-//console.log(today)
+console.log(today.getDate())
+console.log(firstDay.getDate())
+if (today.getDate == firstDay.getDate) {
+    yyyy = lastDay.getFullYear()
+    dd = lastDay.getDate()
+    mm = lastDay.getMonth() + 1
+    console.log(yyyy)
+    console.log(mm)
+    console.log(dd)
+}
+
 today = yyyy + '-' + mm + '-' +dd;
 
 
